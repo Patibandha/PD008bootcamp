@@ -14,6 +14,6 @@ elif operation == "*":
 elif operation == "/":
     r = x / y
 else:
-    print("Please choose correct operation")
+    print("Please choose correct operation");
 
-print("Result: ", r)
+print("Result: ", r);
