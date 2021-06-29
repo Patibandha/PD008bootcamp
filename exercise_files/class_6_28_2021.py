@@ -9,7 +9,7 @@
 """
 
 
-def data_type(*args, **kwargs):
+def data_type(*args, **kwargs):  # <somename_<someanother name>> no caps str, list,
     # name = args[0][0:8:] # Python slicing
     # name_with_last_name = kwargs
     # # print(name[::-1])
@@ -46,8 +46,10 @@ def data_type(*args, **kwargs):
         kw.update({key: value})
     print(kw)
 
+    return kw
 
-data_type(meet=33, dev=19)
+
+output = data_type(meet=33, dev=19)
 #     (
 #     "Shailija77&&&(99OOI093920--",  # 0
 #     45.22,                          # 1
