@@ -1,17 +1,17 @@
-x=float(input("Enter First value: "))
+x = float(input("Enter First value: "))
 y=float(input("Enter Second value: "))
-print("Enter the operator: ");
+print("Enter the operator: ")
 op=input("Enter any value from: + - * / ")
 
 if op== '+':
-    Result=x+y;
+    result=x+y
 elif op== '-':
-    Result=x-y;
+    result=x-y
 elif op== '*':
-    Result=x*y;
+    result=x*y
 elif op== '/':
-    Result=x/y;
+    result=x/y
 else:
-    print("Enter numeric value");
+    print("Enter numeric value")
 
-print("Result is:", Result);
+print("result is:", result)
