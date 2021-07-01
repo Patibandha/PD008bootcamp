@@ -1,10 +1,11 @@
-def pal_string(p):
-    return p == p[::-1]
+p_string = input ("Enter a string: ")
+al_num = ""
 
-p = input ("Enter a string: ")
-result = pal_string(p)
-
-if result:
-    print("yes")
+for character in p_string:
+    if character.isalnum():
+        al_num += character
+print (al_num)
+if(al_num == al_num[::-1]):
+      print("The string is a palindrome")
 else:
-    print("no")
+      print("Not a palindrome")
