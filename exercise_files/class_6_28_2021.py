@@ -53,6 +53,7 @@ def data_type(*args, **kwargs):  # <somename_<someanother name>> no caps str, li
 
 # data_type(meet=33, dev=19, vinay=22)
 # print(output)
+
 data_type(
     "Shailija77&&&(99OOI093920--",  # 0
     #01234567
