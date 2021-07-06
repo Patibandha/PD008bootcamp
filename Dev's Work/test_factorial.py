@@ -1,5 +1,5 @@
 import unittest
-import pytest
+#import pytest
 
 from factorial import factorial
 
@@ -13,8 +13,8 @@ def test_negative_fact():
 
 def test_zero_fact():
     result = factorial(0)
-    assert result = 1
+    assert result == 1
    
 def test_one_fact():
     result = factorial(1)
-    assert result = 1
+    assert result == 1
