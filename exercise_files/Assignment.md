@@ -35,7 +35,9 @@ Shailija:- Create web based random stand-up bot which have following functionali
           > It will generate random list of team members all time
           > default time for all team mate would be 120 seconds
           > you can add or remove any members from web pages
-          > skip memebers
+          > skip members
+          > count seconds on the screen
+
 
 (5) Mother project
 images>mother_project.PNG
