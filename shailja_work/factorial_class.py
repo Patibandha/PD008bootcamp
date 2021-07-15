@@ -4,7 +4,7 @@ from math import factorial
 class Fact:
 
     # Define a function factorial
-    def factorial(self, f):
+    def fac_num(self, f):
         if f < 0:
             msg = "Please Enter Positive number"
             return msg
@@ -20,7 +20,7 @@ obj_fac = Fact()
 def main():
     f = int(input("Enter a number to calculate factorial: "))
     try:
-        ans = obj_fac.factorial(f)
+        ans = obj_fac.fac_num(f)
         print("Factorial of a number is: ", ans)
     except ValueError:
         print("You must choose a number. Please try again")
@@ -28,7 +28,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-def obj_fac():
-    return None
