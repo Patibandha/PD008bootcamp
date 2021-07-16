@@ -1,3 +1,5 @@
+import logging
+
 def palindrome_check(str):
     alphanumeric_string = ""
     for character in str:
@@ -6,10 +8,13 @@ def palindrome_check(str):
     print(alphanumeric_string)
     return alphanumeric_string == alphanumeric_string[::-1]
 
-str = input("Enter a string:" )
-result = palindrome_check(str)
+def main():
+    str = input("Enter a string:" )
+    result = palindrome_check(str)
+    if result:
+        print("String is a palindrome!")
+    else:
+        print("String is not a palindrome")
 
-if result:
-    print("String is a palindrome!")
-else:
-    print("String is not a palindrome")
+if __name__ == '__main__':
+    main()
