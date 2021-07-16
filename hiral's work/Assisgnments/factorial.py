@@ -10,6 +10,7 @@ def factorial(n):
 
 
 # getting user input for factorial
-num = float(input("enter your number"))
-print("you entered", num)
-print("Factorial is:", factorial(num))
+if __name__ == '__main__':
+    num = float(input("enter your number"))
+    print("you entered", num)
+    print("Factorial is:", factorial(num))

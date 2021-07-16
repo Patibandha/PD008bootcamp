@@ -66,4 +66,6 @@ def calculation():
         result = division(num1,num2)
     print("Result is", result)
 
-calculation()
+
+if __name__ == '__main__':
+    calculation()
