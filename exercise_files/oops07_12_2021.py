@@ -64,6 +64,46 @@ class Child2(Parent):
     def parent_name(self):
         return f"My father Name is {self.papa} & My mother Name is {self.mom}"
 
+#############################Encapsulation######################################
+class Motercycle:
+    def __init__(self, brand, model, horsepower):
+        self._brand = brand   #protected variable
+        self.model = model
+        self.__horsepower = horsepower    #private variable
+
+    def about_motorcycle(self):
+        return f"This Awesome {self._brand}'s {self.model}"
+
+    @classmethod
+    def accessing_private(cls):
+        self = cls("Indian", "Chef", 1000)
+        return f"This Awesome {self._brand}'s {self.model} and it has {self.__horsepower}"
+
+
+#####################################Polymorphism/ Method Overloading#######################################
+class Cloth:
+    def __init__(self, brand, type, matrial ):
+        self.brand = brand
+        self.type = type
+        self.matrial = matrial
+
+    def summer(self):
+        print(f"In summer I like to wear {self.brand} cloths of {self.type} with {self.matrial}")
+
+class Cloth_winter:
+    def __init__(self, brand, type, matrial):
+        self.brand = brand
+        self.type = type
+        self.matrial = matrial
+
+    def summer(self):
+        # return \
+        print(f"In summer I like to wear {self.brand} cloths of {self.type} with {self.matrial}")
+
+    # def winter(self):
+    #     return f"In summer I like to wear {self.brand} cloths of {self.type} with {self.matrial}"
+
+
 
 def runner():
     # dog = Dog("Golden Retriver", "3", "Tiger", 24, 30)
@@ -78,6 +118,20 @@ def runner():
     parent = Child2("Alkeshbhi", "Bhavanaben", "Ambalal", "Rasilaben")
     print(parent.grand_parent_name())
     print(parent.parent_name())
+
+    moto = Motercycle("Indian", "Chef", 1000)
+
+    print(moto.about_motorcycle())
+    print(moto._brand)
+    print(moto.model)
+    print(moto._Motercycle__horsepower)
+    print(moto.accessing_private())
+
+    cloth = Cloth("old navy", "pants", "cotton")
+    cloth_winter = Cloth_winter("A&F", "T-shirt", "polyester")
+
+    for my_cloth in (cloth, cloth_winter):
+        print(my_cloth.summer())
 
 if __name__ == '__main__':
     runner()
