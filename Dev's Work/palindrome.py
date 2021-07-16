@@ -1,7 +1,10 @@
 def palindrome_check(str):
-    str = str.replace(" ", "")
-    print(str)
-    return str == str[::-1]
+    alphanumeric_string = ""
+    for character in str:
+        if character.isalnum():
+            alphanumeric_string += character
+    print(alphanumeric_string)
+    return alphanumeric_string == alphanumeric_string[::-1]
 
 str = input("Enter a string:" )
 result = palindrome_check(str)
