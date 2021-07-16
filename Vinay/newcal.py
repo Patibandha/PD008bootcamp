@@ -16,16 +16,20 @@ def divide(num1, num2):
 
 def cal(num1, num2, opr):
     # TODO: add logic to get different operation
-    if opr == '1':
-        add(num1, num2)
-    elif opr == '2':
-        subtract(num1, num2)
+    if opr == 1:
+        answer = add(num1, num2)
+        return answer
+    elif opr == 2:
+        answer = subtract(num1, num2)
+        return answer
 
-    elif opr == '3':
-        multiply(num1, num2)
+    elif opr == 3:
+        answer = multiply(num1, num2)
+        return answer
 
-    elif opr == '4':
-        divide(num1, num2)
+    elif opr == 4:
+        answer = divide(num1, num2)
+        return answer
 
     else:
         print("invalid")
@@ -40,14 +44,15 @@ def main():
     print("2.Subtraction")
     print("3.Multiplication")
     print("4.Divide: ")
-    opr = int(input(""))
-    if opr == ('1', '2', '3', '4'):
+    opr = int(input("Select the following option:"))
+    if opr in (1, 2, 3, 4):
         try:
-            cal(num1, num2, opr)
-            print("Final answer is: ", cal(num1, num2, opr))
+            answer = cal(num1, num2, opr)
+            print("Final answer is: ", answer)
         except ValueError:
             print("Number must be between 1-4. Try again: ")
-        return main()
+    else:
+        print("How would I end up here?")
 
 
 if __name__ == '__main__':
