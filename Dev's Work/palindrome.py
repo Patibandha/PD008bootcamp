@@ -14,7 +14,8 @@ def main():
     if result:
         print("String is a palindrome!")
     else:
-        print("String is not a palindrome")
+        msg = ("String is not a palindrome")
+        logging.warning(msg)
 
 if __name__ == '__main__':
     main()
