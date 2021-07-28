@@ -3,13 +3,16 @@ import logging
 
 
 def main():
-    s = input("Enter a string")
-    empty_string = ""
-    for char in s:
-        if char.isalnum():
-            empty_string += char
-    logging.warning("statement checking: " + empty_string)
-    statement_condition(empty_string)
+    try:
+        s = input("Enter a string")
+        empty_string = ""
+        for char in s:
+            if char.isalnum():
+                empty_string += char
+        logging.warning("statement checking: " + empty_string)
+        statement_condition(empty_string)
+    except:
+        print("Enter valid string")
 
 
 def statement_condition(empty_string):
