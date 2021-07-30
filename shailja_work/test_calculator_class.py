@@ -56,13 +56,12 @@ def test_list_positive():
     assert True
 
 
-def test_string_negative():
+def test_string_positive():
     with mock.patch.object(builtins, 'input', lambda _: 'strong', '1', '+'):
         with LogCapture() as actual_log:
             main()
             expected_log = (
                 ('root', 'WARNING', 'please enter numeric value'),
             )
-            if expected_log == actual_log:
-                assert actual_log.actual()[0] == expected_log[0]
-                assert True
+            assert actual_log.actual()[0] == expected_log[0]
+    assert True
