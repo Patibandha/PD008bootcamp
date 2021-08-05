@@ -51,6 +51,7 @@ class Parent:
     def grand_parent_name(self):
         return f"My Grandfather Name is {self.gp} & My Grandmother Name is {self.gm}"
 
+
 class Child1(Parent):
     pass
 
@@ -64,12 +65,13 @@ class Child2(Parent):
     def parent_name(self):
         return f"My father Name is {self.papa} & My mother Name is {self.mom}"
 
+
 #############################Encapsulation######################################
 class Motercycle:
     def __init__(self, brand, model, horsepower):
-        self._brand = brand   #protected variable
+        self._brand = brand  # protected variable
         self.model = model
-        self.__horsepower = horsepower    #private variable
+        self.__horsepower = horsepower  # private variable
 
     def about_motorcycle(self):
         return f"This Awesome {self._brand}'s {self.model}"
@@ -82,13 +84,14 @@ class Motercycle:
 
 #####################################Polymorphism/ Method Overloading#######################################
 class Cloth:
-    def __init__(self, brand, type, matrial ):
+    def __init__(self, brand, type, matrial):
         self.brand = brand
         self.type = type
         self.matrial = matrial
 
     def summer(self):
         print(f"In summer I like to wear {self.brand} cloths of {self.type} with {self.matrial}")
+
 
 class Cloth_winter:
     def __init__(self, brand, type, matrial):
@@ -104,6 +107,25 @@ class Cloth_winter:
     #     return f"In summer I like to wear {self.brand} cloths of {self.type} with {self.matrial}"
 
 
+####################################Abstraction##################################
+from abc import ABC, abstractmethod
+
+
+class TwoWheeler(ABC):
+    def __init__(self, brand):
+        self.brand = brand
+
+    def get_details(self):
+        return f"Motercycle Make is {self.brand}"
+
+    @abstractmethod
+    def cost(self, cost):
+        pass
+
+class TwoStrockMotercycle(TwoWheeler):
+    def cost(self, cost):
+        return f"Cost of {self.brand} is {cost}"
+
 
 def runner():
     # dog = Dog("Golden Retriver", "3", "Tiger", 24, 30)
@@ -112,26 +134,36 @@ def runner():
     # ans2 = dog.phsic()
     # print(ans2)
 
-    parent_object = Child1("Ambalal", "Rasilaben")
-    print(parent_object.grand_parent_name())
+    # parent_object = Child1("Ambalal", "Rasilaben")
+    # print(parent_object.grand_parent_name())
+    #
+    # parent = Child2("Alkeshbhi", "Bhavanaben", "Ambalal", "Rasilaben")
+    # print(parent.grand_parent_name())
+    # print(parent.parent_name())
+    #
+    # moto = Motercycle("Indian", "Chef", 1000)
+    #
+    # print(moto.about_motorcycle())
+    # print(moto._brand)
+    # print(moto.model)
+    # print(moto._Motercycle__horsepower)
+    # print(moto.accessing_private())
+    #
+    # cloth = Cloth("old navy", "pants", "cotton")
+    # cloth_winter = Cloth_winter("A&F", "T-shirt", "polyester")
+    #
+    # for my_cloth in (cloth, cloth_winter):
+    #     print(my_cloth.summer())
 
-    parent = Child2("Alkeshbhi", "Bhavanaben", "Ambalal", "Rasilaben")
-    print(parent.grand_parent_name())
-    print(parent.parent_name())
 
-    moto = Motercycle("Indian", "Chef", 1000)
+    two = TwoStrockMotercycle("Ducati")
+    print(two.get_details())
+    print(two.cost(20000))
 
-    print(moto.about_motorcycle())
-    print(moto._brand)
-    print(moto.model)
-    print(moto._Motercycle__horsepower)
-    print(moto.accessing_private())
+    # one = TwoWheeler("Yamaha")
+    # print(one.get_details())
+    # print(one.cost("10000"))
 
-    cloth = Cloth("old navy", "pants", "cotton")
-    cloth_winter = Cloth_winter("A&F", "T-shirt", "polyester")
-
-    for my_cloth in (cloth, cloth_winter):
-        print(my_cloth.summer())
 
 if __name__ == '__main__':
     runner()
