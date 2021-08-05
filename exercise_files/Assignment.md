@@ -44,3 +44,6 @@ images>mother_project.PNG
 
 
 (6{7/15/2021}) Write two program with method overriding and method overloading examples of course with test cases +ve and -ve
+
+
+(7{8/05/2021}) Create and write file with this is line n where 0 <= n <= 10 and then append your string to that file and read all data from that file
