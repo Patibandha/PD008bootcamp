@@ -12,7 +12,7 @@ def main():
         logging.warning("statement checking: " + empty_string)
         statement_condition(empty_string)
     except:
-        print("Enter valid string")
+        logging.warning("Enter valid string")
 
 
 def statement_condition(empty_string):
