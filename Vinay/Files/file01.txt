@@ -1,0 +1,11 @@
+The string is  0
+The output is: 1The string is  1
+The output is: 1The string is  2
+The output is: 1The string is  3
+The output is: 1The string is  4
+The output is: 1The string is  5
+The output is: 1The string is  6
+The output is: 1The string is  7
+The output is: 1The string is  8
+The output is: 1The string is  9
+The output is: 1
