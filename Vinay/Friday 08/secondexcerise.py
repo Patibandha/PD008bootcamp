@@ -7,22 +7,27 @@
 # Hints:
 # In case of input data being supplied to the question, it should be assumed to be a console input.
 import logging
-import logging
-
 
 number = int(input("Enter a number: "))
 
-
 def factorial(number):
+
     if number == 1:
         return number
+    elif number < 0:
+        logging.warning('Number is invalid. Please enter a valid number')
+        return logging.warning
+    elif number == 0:
+        logging.warning('0 factorial is 1')
+        return logging.warning
     else:
         return (number * factorial(number - 1))
 
 
-if number < 0:
-    logging.warning('Number is invalid. Please enter a valid number')
-elif number == 0:
-    logging.warning('0 factorial is 1')
-else:
-    print("The factorial of ", number, "is", factorial(number))
+print("You input is ", number, ": and your ouput is: ", factorial(number))
+
+
+
+
+
+
