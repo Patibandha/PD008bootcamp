@@ -116,6 +116,17 @@ Suppose the following inputs are given to the program:
 Then, the output of the program should be:
 [[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]
 
+[
+[0, 0, 0, 0, 0],[(0*0), (0*1), (0*2), (0*3), (0*4)],
+[0, 1, 2, 3, 4],[(1*0), (1*1), (1*2), (1*3), (1*4)]
+[0, 2, 4, 6, 8] [(2*0), (2*1), (2*2), (3*3), (4*4)]
+]
+for i in range(0,3):
+    i=0,1,2
+    for j in range(0,5):
+        j=0,1,2,3,4
+
+
 Hints:
 Note: In case of input data being supplied to the question, it should be assumed to be a console input in a comma-separated form.
 
