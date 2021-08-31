@@ -6,10 +6,18 @@
 # Hints: In case of input data being supplied to the question, it should be assumed to be a console input. tuple() method can convert list to tuple
 
 
-num = int(input("Enter a number: "))
-num_dictonary = dict()
+def dict_num(num):
+    num_dictionary = dict()
+    for i in range(1, num + 1):
+        num_dictionary[i] = i * i
+    return num_dictionary
 
-for i in range(1, num + 1):
-    num_dictonary[i] = i * i
 
-print(num_dictonary)
+def main():
+    num = int(input("Enter a number: "))
+    dict_ans = dict_num(num)
+    print(dict_ans)
+
+
+if __name__ == '__main__':
+    main()

@@ -10,12 +10,15 @@ def factorial(f):
     else:
         return f * factorial(f - 1)
 
-        def fact(x):
-            if x == 0:
-                return 1
-            return x * fact(x - 1)
+
+def main():
+    f = int(input("Enter a number to calulate factorial: "))
+    try:
+        factorial(f)
+        print("Factorial of a number is: ", factorial(f))
+    except ValueError:
+        print("You must choose a number. Please try again")
 
 
-f = int(input("Enter a number to calulate factorial: "))
-
-print("Factorial of a number is: ", factorial(f))
+if __name__ == '__main__':
+    main()
