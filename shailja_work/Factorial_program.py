@@ -7,11 +7,12 @@ def factorial(f):
     elif f == 0 or f == 1:
         return 1
     else:
-        fact_number = 1
-        while(f > 1):
-            fact_number = fact_number * f
-            f = f - 1
-        return fact_number
+        return (f * factorial(f - 1))
+        # fact_number = 1
+        # while(f > 1):
+        #     fact_number = fact_number * f
+        #     f = f - 1
+        # return fact_number
 
 
 def main():
@@ -25,7 +26,5 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
 
 
